@@ -1,0 +1,364 @@
+@import url("https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Inter:wght@400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Dosis:wght@400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: 'Dosis';
+}
+
+.start-heading {
+  font-family: 'Dancing Script';
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 2;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(79, 77, 77, 0.815);
+}
+
+.close-modal {
+  cursor: pointer;
+}
+
+.open-modal {
+  cursor: pointer;
+}
+
+.modal-content {
+  width: 35%;
+  height: 50vh;
+  margin: 10% auto;
+  padding: 1.5em 0;
+  background: -webkit-gradient(linear, left bottom, right top, from(#f24271), color-stop(#f059a4), to(#f24271));
+  background: linear-gradient(to right top, #f24271, #f059a4, #f24271);
+}
+
+.modal-content h4 {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: lighter;
+  color: white;
+}
+
+.modal-content .close-modal {
+  float: right;
+  font-size: 3.5rem;
+  font-weight: lighter;
+  color: white;
+  margin: -1.1em .5em;
+}
+
+form {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+form input {
+  width: 50%;
+  margin: 1em 0;
+  border: 6px solid snow;
+  border-radius: 4px;
+}
+
+form label {
+  color: white;
+  font-size: 1.3rem;
+}
+
+form .submit {
+  width: 30%;
+  border: 6px solid snow;
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+form .submit:hover {
+  color: #f059a4;
+  font-size: 1.1rem;
+}
+
+.container {
+  min-height: 100vh;
+  background: -webkit-gradient(linear, left bottom, right top, from(#f24271), color-stop(#f059a4), to(#f24271));
+  background: linear-gradient(to right top, #f24271, #f059a4, #f24271);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.alert-danger {
+  color: red;
+}
+
+.alert-success {
+  color: green;
+}
+
+.glass-container {
+  background: white;
+  width: 70%;
+  min-height: 80vh;
+  margin: auto;
+  background: -webkit-gradient(linear, left top, right bottom, from(rgba(255, 255, 255, 0.8)), to(rgba(255, 255, 255, 0.3)));
+  background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.3));
+  border-radius: 2em;
+  -webkit-backdrop-filter: blur(2rem);
+          backdrop-filter: blur(2rem);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.users-container {
+  -webkit-box-flex: 2;
+      -ms-flex: 2;
+          flex: 2;
+  margin: 2em;
+  padding: 1em;
+  background-color: rgba(255, 255, 255, 0.887);
+  border-radius: 2em;
+}
+
+.users-container h3 {
+  font-weight: bold;
+}
+
+.users-container .user-list {
+  list-style: none;
+}
+
+.users-container .user-list .list-item {
+  background-color: rgba(20, 198, 189, 0.332);
+  background: -webkit-gradient(linear, left bottom, right top, from(#f47899), color-stop(#e77eb2), to(#f47899));
+  background: linear-gradient(to right top, #f47899, #e77eb2, #f47899);
+  margin: 1em 0;
+  line-height: 2em;
+}
+
+.users-container .user-list .list-item div {
+  cursor: pointer;
+  text-align: center;
+  font-weight: bold;
+}
+
+.users-container .user-list .list-item div a {
+  color: white;
+  text-decoration: none;
+  float: right;
+  font-size: 1.3rem;
+  margin: .1em .4em;
+}
+
+.users-container .user-list .list-item div .unbold {
+  font-weight: lighter;
+}
+
+.buttons {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+.age {
+  margin: 0 2em;
+  -webkit-box-flex: 6;
+      -ms-flex: 6;
+          flex: 6;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.age .current-div {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  background-color: rgba(255, 255, 255, 0.887);
+  border-radius: 2em;
+  margin: 1em 2em;
+}
+
+.age .current-div ul {
+  list-style: none;
+  margin: .3em 1em;
+}
+
+.age .current-div ul li {
+  color: linear-gradient(to right top, #f24271, #f059a4, #f24271);
+  text-align: center;
+}
+
+.age .current-div ul .age-header {
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+
+.age .current-div ul .seconds {
+  -webkit-animation: grow 1s infinite linear forwards;
+          animation: grow 1s infinite linear forwards;
+}
+
+.age .current-div ul .minutes {
+  -webkit-animation: grow 60s infinite linear forwards;
+          animation: grow 60s infinite linear forwards;
+}
+
+.age .current-div ul .hours {
+  -webkit-animation: grow 3600s infinite linear forwards;
+          animation: grow 3600s infinite linear forwards;
+}
+
+.age .current-div div {
+  background: -webkit-gradient(linear, left bottom, right top, from(#f24271), color-stop(#f059a4), to(#f24271));
+  background: linear-gradient(to right top, #f24271, #f059a4, #f24271);
+  margin: .4em auto 0 auto;
+  height: 5vh;
+  width: 25%;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.age .countdown {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  background-color: rgba(255, 255, 255, 0.887);
+  margin: 1em 2em;
+  border-radius: 2em;
+}
+
+.age .countdown ul {
+  list-style: none;
+  margin: 1em .3em;
+}
+
+.age .countdown ul li {
+  color: linear-gradient(to right top, #f24271, #f059a4, #f24271);
+  text-align: center;
+  -webkit-transform: scale(1);
+          transform: scale(1);
+}
+
+.age .countdown ul .seconds {
+  -webkit-animation: shrink 1s infinite linear forwards;
+          animation: shrink 1s infinite linear forwards;
+}
+
+.age .countdown ul .minutes {
+  -webkit-animation: shrink 60s infinite linear forwards;
+          animation: shrink 60s infinite linear forwards;
+}
+
+.age .countdown ul .hours {
+  -webkit-animation: shrink 3600s infinite linear forwards;
+          animation: shrink 3600s infinite linear forwards;
+}
+
+.age .countdown ul .count-header {
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+
+.age .countdown div {
+  background: -webkit-gradient(linear, left bottom, right top, from(#f24271), color-stop(#f059a4), to(#f24271));
+  background: linear-gradient(to right top, #f24271, #f059a4, #f24271);
+  margin: .4em auto 0 auto;
+  height: 5vh;
+  width: 25%;
+  text-align: center;
+  font-size: 1.5rem;
+  -webkit-animation: grow .5s timing- delay infinite ease-in-out forwards;
+          animation: grow .5s timing- delay infinite ease-in-out forwards;
+}
+
+.buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  margin: 10em 0;
+}
+
+.buttons .open-modal {
+  width: 100%;
+  height: 50%;
+  margin: 1em 0;
+  background-color: green;
+  background: -webkit-gradient(linear, left bottom, right top, from(#f24271), color-stop(#f059a4), to(#f24271));
+  background: linear-gradient(to right top, #f24271, #f059a4, #f24271);
+  border-radius: 1em;
+  border: none;
+  padding: 1em;
+}
+
+@-webkit-keyframes grow {
+  from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  to {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+}
+
+@keyframes grow {
+  from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  to {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+}
+
+@-webkit-keyframes shrink {
+  from {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes shrink {
+  from {
+    -webkit-transform: scale(1.2);
+            transform: scale(1.2);
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+/*# sourceMappingURL=styles.css.map */

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <script src="https://use.fontawesome.com/5c74b16019.js"></script>
+    <title>Birthday App</title>
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+    <!-- STORE MODAL -->
+    <div class="store-modal modal" id="store-modal">
+        <div class="modal-content" id="store-modal-content">
+            <h4>Add New User</h4>
+            <span class="close-modal" id="close-store-modal">&times;</span>
+            <div class="message-div"></div>
+        <form action="#" id="store-form">
+            <input type="text" placeholder="Type your name" id="store-username">
+            <label for="birthdate">Input your Birth Date..</label>
+            <input type="datetime-local" name="birthdate" id="store-birthdate">
+            <button type="submit" class="submit" id="store-submit">Add User</button>
+        </form>
+        </div>
+    </div>
+    <!-- GUEST MODAL -->
+    <div class="modal" id="guest-modal">
+            <div class="guest-modal-content modal-content">
+            <h4>Enter as Guest</h4>
+            <span class="close-modal" id="close-guest-modal">&times;</span>
+            <form action="#" id="guest-form">
+                <div class="message"></div>
+            <input type="text" placeholder="Type your name" id="guest-username">
+            <label for="birthdate">Input your Birth Date..</label>
+            <div class="message"></div>
+            <input type="datetime-local" name="birthdate" id="guest-birthdate">
+            <button type="submit" class="submit" id="guest-submit">Submit</button>
+            </form>
+            </div>
+        </div>
+        <!-- CONTAINER (UI) -->
+    <div class="container">
+        <div class="glass-container">
+            <!-- <h1>Your Birthday</h1> -->
+        <div class="users-container">
+            <div class="current-user">
+            <img src="" alt="">
+            <h2></h2>
+        </div>
+        <div class="users">
+            <div class="messager-div"></div>
+            <h3>Users</h3>
+            <ul class="user-list" id="user-list"></ul>
+        </div>
+        </div>
+        <!-- <div><a href="index.html">Back to Home</a</div> -->
+        <div class="buttons">
+            <button class="open-modal" id="open-store-modal">Add New User</button>
+            <button class="open-modal" id="open-guest-modal">Guest</button>
+        </div>
+        <div class="age">
+            <div class="current-div"><span class="current-age"></span></div>
+            <div class="countdown"></div>
+        </div>
+        <div class="birthday"></div>
+        </div>
+    </div>
+    
+    
+</body>
+</html>

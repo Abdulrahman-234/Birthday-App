@@ -1,0 +1,323 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Inter:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dosis:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Dosis';
+}
+
+.start-heading {
+    font-family: 'Dancing Script';
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 2;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(79, 77, 77, 0.815);
+}
+
+.close-modal {
+    cursor: pointer;
+}
+
+.open-modal {
+    cursor: pointer;
+}
+
+.modal-content {
+    width: 35%;
+    height: 50vh;
+    margin: 10% auto;
+    padding: 1.5em 0;
+    background: linear-gradient(to right top,
+            #f24271,
+            #f059a4,
+            #f24271);
+
+    h4 {
+        text-align: center;
+        font-size: 2rem;
+        font-weight: lighter;
+        color: white;
+    }
+
+    .close-modal {
+        float: right;
+        font-size: 3.5rem;
+        font-weight: lighter;
+        color: white;
+        margin: -1.1em .5em;
+    }
+}
+
+form {
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+
+    input {
+        width: 50%;
+        margin: 1em 0;
+        border: 6px solid snow;
+        border-radius: 4px;
+
+    }
+
+    label {
+        color: white;
+        font-size: 1.3rem;
+    }
+
+    .submit {
+        width: 30%;
+        // margin: 1em 0;
+        border: 6px solid snow;
+        border-radius: 2px;
+        cursor: pointer;
+
+        &:hover {
+            color: #f059a4;
+            // font-weight: bold;
+            font-size: 1.1rem;
+        }
+    }
+
+
+}
+
+.container {
+    min-height: 100vh;
+    background: linear-gradient(to right top,
+            #f24271,
+            #f059a4,
+            #f24271);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.alert-danger {
+    color: red;
+}
+
+.alert-success {
+    color: green;
+}
+
+.glass-container {
+    background: white;
+    width: 70%;
+    min-height: 80vh;
+    margin: auto;
+    background: linear-gradient(to right bottom, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.3));
+    border-radius: 2em;
+    backdrop-filter: blur(2rem);
+    display: flex;
+}
+
+.users-container {
+    flex: 2;
+    margin: 2em;
+    padding: 1em;
+    background-color: rgba(255, 255, 255, 0.887);
+    border-radius: 2em;
+
+    h3 {
+        font-weight: bold;
+    }
+
+    .user-list {
+        list-style: none;
+
+        .list-item {
+            background-color: rgba(20, 198, 189, 0.332);
+            background: linear-gradient(to right top,
+                    #f47899,
+                    #e77eb2,
+                    #f47899);
+            margin: 1em 0;
+            line-height: 2em;
+
+            div {
+                cursor: pointer;
+                text-align: center;
+                font-weight: bold;
+
+                a {
+                    color: white;
+                    text-decoration: none;
+                    float: right;
+                    font-size: 1.3rem;
+                    margin: .1em .4em;
+                }
+
+                .unbold {
+                    font-weight: lighter;
+                }
+            }
+        }
+    }
+}
+
+.buttons {
+    flex: 1;
+}
+
+.age {
+    margin: 0 2em;
+    flex: 6;
+    display: flex;
+
+    .current-div {
+        flex: 1;
+        background-color: rgba(255, 255, 255, 0.887);
+        border-radius: 2em;
+        margin: 1em 2em;
+
+        ul {
+            list-style: none;
+            margin: .3em 1em;
+
+            li {
+                color: linear-gradient(to right top,
+                        #f24271,
+                        #f059a4,
+                        #f24271);
+                text-align: center;
+            }
+
+            .age-header {
+                font-weight: bold;
+                font-size: 1.3rem;
+            }
+
+            .seconds {
+                animation: grow 1s infinite linear forwards;
+            }
+
+            .minutes {
+                animation: grow 60s infinite linear forwards;
+            }
+
+            .hours {
+                animation: grow 3600s infinite linear forwards;
+            }
+        }
+
+        div {
+            background: linear-gradient(to right top,
+                    #f24271,
+                    #f059a4,
+                    #f24271);
+            margin: .4em auto 0 auto;
+            height: 5vh;
+            width: 25%;
+            text-align: center;
+            font-size: 1.5rem;
+        }
+    }
+
+    .countdown {
+        flex: 1;
+        background-color: rgba(255, 255, 255, 0.887);
+        margin: 1em 2em;
+        border-radius: 2em;
+
+        ul {
+            list-style: none;
+            margin: 1em .3em;
+
+            li {
+                color: linear-gradient(to right top,
+                        #f24271,
+                        #f059a4,
+                        #f24271);
+                text-align: center;
+                transform: scale(1);
+
+                // animation: grow 3s linear forwards;
+            }
+
+            .seconds {
+                animation: shrink 1s infinite linear forwards;
+            }
+
+            .minutes {
+                animation: shrink 60s infinite linear forwards;
+            }
+
+            .hours {
+                animation: shrink 3600s infinite linear forwards;
+            }
+
+            .count-header {
+                font-weight: bold;
+                font-size: 1.3rem;
+            }
+        }
+
+        div {
+            background: linear-gradient(to right top,
+                    #f24271,
+                    #f059a4,
+                    #f24271);
+            margin: .4em auto 0 auto;
+            height: 5vh;
+            width: 25%;
+            text-align: center;
+            font-size: 1.5rem;
+            animation: grow .5s timing- delay infinite ease-in-out forwards;
+        }
+    }
+}
+
+.buttons {
+    display: flex;
+    flex-direction: column;
+    margin: 10em 0;
+
+    .open-modal {
+        width: 100%;
+        height: 50%;
+        margin: 1em 0;
+        background-color: green;
+        background: linear-gradient(to right top,
+                #f24271,
+                #f059a4,
+                #f24271);
+        border-radius: 1em;
+        border: none;
+        padding: 1em;
+    }
+}
+
+@keyframes grow {
+    from {
+        transform: scale(1);
+    }
+
+    to {
+        transform: scale(1.2);
+    }
+}
+
+@keyframes shrink {
+    from {
+        transform: scale(1.2);
+    }
+
+    to {
+        transform: scale(1);
+    }
+}
