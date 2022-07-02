@@ -21,8 +21,8 @@ class GUESTUI {
             const distance = today - dateOfBirth;
             const years = Math.floor(distance / (1000 * 60 * 60 * 24 * 7 * 4.3 * 12));
             const months = Math.floor((distance % (1000 * 60 * 60 * 24 * 7 * 4.3 * 12)) / (1000 * 60 * 60 * 24 * 7 * 4.3) - 2);
-            const weeks = Math.floor((distance % (1000 * 60 * 60 * 24 * 7 * 4.3)) / (1000 * 60 * 60 * 24 * 7) - 1);
-            const days = Math.floor((distance % (1000 * 60 * 60 * 24 * 7)) / (1000 * 60 * 60 * 24) - 5);
+            const weeks = Math.floor((distance % (1000 * 60 * 60 * 24 * 7 * 4.3)) / (1000 * 60 * 60 * 24 * 7));
+            const days = Math.floor((distance % (1000 * 60 * 60 * 24 * 7)) / (1000 * 60 * 60 * 24));
             const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
             const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
             const seconds = Math.floor((distance % (1000 * 60)) / (1000));
